@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D3550A21EFFE5F300400C16 /* PopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3550A01EFFE5F300400C16 /* PopViewCell.swift */; };
+		9D3550A31EFFE5F300400C16 /* PopViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D3550A11EFFE5F300400C16 /* PopViewCell.xib */; };
 		9D8F7D071EFD48D00064ABFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D061EFD48D00064ABFE /* AppDelegate.swift */; };
 		9D8F7D091EFD48D00064ABFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D081EFD48D00064ABFE /* ViewController.swift */; };
 		9D8F7D0C1EFD48D00064ABFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F7D0A1EFD48D00064ABFE /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		9D8F7D111EFD48D00064ABFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F7D0F1EFD48D00064ABFE /* LaunchScreen.storyboard */; };
 		9D8F7D1C1EFD48D00064ABFE /* PopViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D1B1EFD48D00064ABFE /* PopViewTests.swift */; };
 		9D8F7D271EFD48D00064ABFE /* PopViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D261EFD48D00064ABFE /* PopViewUITests.swift */; };
+		9D8F7D351EFD504F0064ABFE /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D341EFD504F0064ABFE /* PopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D3550A01EFFE5F300400C16 /* PopViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewCell.swift; sourceTree = "<group>"; };
+		9D3550A11EFFE5F300400C16 /* PopViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopViewCell.xib; sourceTree = "<group>"; };
 		9D8F7D031EFD48D00064ABFE /* PopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8F7D061EFD48D00064ABFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D8F7D081EFD48D00064ABFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		9D8F7D221EFD48D00064ABFE /* PopViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8F7D261EFD48D00064ABFE /* PopViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewUITests.swift; sourceTree = "<group>"; };
 		9D8F7D281EFD48D00064ABFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D8F7D341EFD504F0064ABFE /* PopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopView.swift; path = PopView/PopView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D35509F1EFFE5C000400C16 /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				9D8F7D341EFD504F0064ABFE /* PopView.swift */,
+				9D3550A01EFFE5F300400C16 /* PopViewCell.swift */,
+				9D3550A11EFFE5F300400C16 /* PopViewCell.xib */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
 		9D8F7CFA1EFD48D00064ABFE = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +113,7 @@
 		9D8F7D051EFD48D00064ABFE /* PopView */ = {
 			isa = PBXGroup;
 			children = (
+				9D35509F1EFFE5C000400C16 /* PopView */,
 				9D8F7D061EFD48D00064ABFE /* AppDelegate.swift */,
 				9D8F7D081EFD48D00064ABFE /* ViewController.swift */,
 				9D8F7D0A1EFD48D00064ABFE /* Main.storyboard */,
@@ -234,6 +251,7 @@
 			files = (
 				9D8F7D111EFD48D00064ABFE /* LaunchScreen.storyboard in Resources */,
 				9D8F7D0E1EFD48D00064ABFE /* Assets.xcassets in Resources */,
+				9D3550A31EFFE5F300400C16 /* PopViewCell.xib in Resources */,
 				9D8F7D0C1EFD48D00064ABFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D8F7D091EFD48D00064ABFE /* ViewController.swift in Sources */,
+				9D8F7D351EFD504F0064ABFE /* PopView.swift in Sources */,
+				9D3550A21EFFE5F300400C16 /* PopViewCell.swift in Sources */,
 				9D8F7D071EFD48D00064ABFE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +527,7 @@
 				9D8F7D2D1EFD48D00064ABFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D8F7D2E1EFD48D00064ABFE /* Build configuration list for PBXNativeTarget "PopViewTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +536,7 @@
 				9D8F7D301EFD48D00064ABFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D8F7D311EFD48D00064ABFE /* Build configuration list for PBXNativeTarget "PopViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +545,7 @@
 				9D8F7D331EFD48D00064ABFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
