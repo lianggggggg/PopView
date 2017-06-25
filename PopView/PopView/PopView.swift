@@ -81,7 +81,7 @@ class PopView: UIView,UITableViewDelegate,UITableViewDataSource {
         view.tableView?.backgroundColor = .clear
         view.tableView?.separatorStyle = .none
         
-//        view.tableView?.register(UINib.init(nibName: "PopViewCell", bundle: nil), forCellReuseIdentifier: "PopViewCell")
+        view.tableView?.register(UINib.init(nibName: "PopViewCell", bundle: nil), forCellReuseIdentifier: "PopViewCell")
         
         view.backView = UIView()
         return view
@@ -186,16 +186,15 @@ class PopView: UIView,UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        var cell = self.tableView!.dequeueReusableCell(withIdentifier: "PopViewCell", for: indexPath) as? PopViewCell
-//        
-//        if cell == nil {
-//            cell = PopViewCell.init(style: .default, reuseIdentifier: "PopViewCell")
-//        }
+        var cell = self.tableView!.dequeueReusableCell(withIdentifier: "PopViewCell", for: indexPath) as? PopViewCell
         
-        let cell = PopViewCell.init(style: .default, reuseIdentifier: "PopViewCell")
-        cell.backgroundColor = .clear
+        if cell == nil {
+            cell = Bundle.main.loadNibNamed("PopViewCell", owner: nil, options: nil)?.first as! PopViewCell
+        }
         
-        return cell
+        cell?.initCell(model: self.dataSource![indexPath.row])
+        
+        return cell!
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if self.block != nil {

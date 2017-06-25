@@ -26,11 +26,10 @@ class ViewController: UIViewController {
         
         PopView.share.createPopView(target: self, dataSource: [model1,model2,model3], seat: .UpRight) { (indexPatch) in
             
+            print(indexPatch)
+            
         }
-//        
-//        PopView.share.createPopView(target: self, dataSource: [model1,model2,model3], seat: .UpRight) { (indexPatch) in
-//            
-//        }
+
         
     }
     @IBAction func btnClick(_ sender: Any) {
