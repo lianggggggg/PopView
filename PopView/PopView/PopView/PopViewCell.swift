@@ -10,21 +10,21 @@ import UIKit
 
 class PopViewCell: UITableViewCell {
 
+    @IBOutlet weak var lbl1: UILabel!
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
+    @IBOutlet weak var lbl2: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func initCell(model:PopSourceModel){
+        lbl1.text = model.img
+        lbl2.text = model.title
+    }
+    
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
