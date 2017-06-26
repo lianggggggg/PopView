@@ -15,6 +15,7 @@ let SCREEN_WIDTH = UIScreen.main.bounds.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
 
 private let PopView_tag:Int = 9999
+private let CenterPopView_tag:Int = 22222
 private let backView_tag:Int = 11111
 private let iPhone6_screen:CGFloat = 375.0
 
@@ -88,7 +89,7 @@ class PopView: UIView,UITableViewDelegate,UITableViewDataSource {
     }()
     
     
-    open func createPopView(frame:CGRect = .zero,target:UIViewController,dataSource:[PopSourceModel],seat:Seat,itemsClickBlock:@escaping ItemsClickBlock){
+    open func createPopView(frame:CGRect = .zero,target:UIViewController,dataSource:[PopSourceModel],seat:Seat = .UpRight,itemsClickBlock:@escaping ItemsClickBlock){
         
         var popViewFrame = CGRect.zero
         
@@ -110,7 +111,6 @@ class PopView: UIView,UITableViewDelegate,UITableViewDataSource {
         PopView.share.layer.position = CGPoint.init(x: popViewFrame.origin.x + popViewFrame.size.width - margin, y: popViewFrame.origin.y)//运动后的位置
         //MARK:位置↑↑↑↑↑↑↑
         
-//        PopView.share.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
         PopView.share.target = target
         PopView.share.dataSource = dataSource
         
@@ -167,7 +167,7 @@ class PopView: UIView,UITableViewDelegate,UITableViewDataSource {
         
     }
     
-    func tapClick(){
+    @objc private func tapClick(){
         
         //隐藏整个视图
         showPopWithAnimation()
@@ -235,4 +235,139 @@ class PopView: UIView,UITableViewDelegate,UITableViewDataSource {
     
     
     
+
+    
+    deinit {
+        self.removeFromSuperview()
+    }
+    
 }
+
+
+
+class CenterPopView: UIView,UITableViewDelegate,UITableViewDataSource {
+    
+    var block:ItemsClickBlock?
+    
+    var target:UIViewController? //展示所在的控制器
+    var dataSource:[PopSourceModel]? //数据源
+    
+    
+    var maxItemsCount:Int = 6 //显示几格  确定tableview的大小
+    var cellRowHeight:CGFloat = 40 //cell的高度
+    
+    private var imageView:UIImageView?
+    private var tableView:UITableView?
+    private var backView:UIView?
+    
+    private var isShow:Bool = true
+    
+    static let share:CenterPopView = {
+        let view = CenterPopView()
+        view.tag = CenterPopView_tag
+        view.imageView = UIImageView()
+        
+        view.tableView = UITableView()
+        view.tableView?.dataSource = view
+        view.tableView?.delegate = view
+        view.tableView?.backgroundColor = .clear
+        view.tableView?.separatorStyle = .none
+        
+        view.tableView?.register(UINib.init(nibName: "PopViewCell", bundle: nil), forCellReuseIdentifier: "PopViewCell")
+        
+        view.backView = UIView()
+        return view
+    }()
+    
+    
+    //MARK:中间弹出框
+    
+    
+    open func createCenterPopView(width:CGFloat,height:CGFloat,color:UIColor,target:UIViewController,itemsBlock:@escaping ItemsClickBlock){
+        
+        
+        CenterPopView.share.frame.size = CGSize.init(width: width, height: height)
+
+        CenterPopView.share.center = target.view.center
+        
+        CenterPopView.share.backgroundColor = color
+        CenterPopView.share.target = target
+        CenterPopView.share.layer.masksToBounds = true
+        CenterPopView.share.layer.cornerRadius = 10
+        
+        CenterPopView.share.block = {(indexPath:IndexPath?) -> () in
+            
+            if indexPath != nil {
+                itemsBlock(indexPath!)
+            }
+            
+        }
+        
+        
+        CenterPopView.share.createCenterUI(width: width, height: height)
+        target.view.addSubview(CenterPopView.share)
+        
+    }
+    
+    private func createCenterUI(width:CGFloat,height:CGFloat){
+        
+        
+        
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    private func tapClick(){
+        
+        //隐藏整个视图
+//        showPopWithAnimation()
+    }
+    
+    
+    //MARK:tableviewdelegate/rableviewdatasource
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataSource?.count ?? 0
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellRowHeight
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell = self.tableView!.dequeueReusableCell(withIdentifier: "PopViewCell", for: indexPath) as? PopViewCell
+        
+        if cell == nil {
+            cell = Bundle.main.loadNibNamed("PopViewCell", owner: nil, options: nil)?.first as! PopViewCell
+        }
+        
+        cell?.initCell(model: self.dataSource![indexPath.row])
+        
+        return cell!
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if self.block != nil {
+            block!(indexPath)
+        }
+        
+    }
+    
+}
+
+
+
+
+
+
+

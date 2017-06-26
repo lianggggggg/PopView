@@ -10,7 +10,6 @@ import UIKit
 
 class PopViewCell: UITableViewCell {
 
-    @IBOutlet weak var lbl1: UILabel!
     
     @IBOutlet weak var lbl2: UILabel!
     
@@ -20,7 +19,6 @@ class PopViewCell: UITableViewCell {
     }
     
     func initCell(model:PopSourceModel){
-        lbl1.text = model.img
         lbl2.text = model.title
     }
     

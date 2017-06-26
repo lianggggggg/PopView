@@ -24,12 +24,18 @@ class ViewController: UIViewController {
         model3.img = "3"
         model3.title = "3"
         
-        PopView.share.createPopView(target: self, dataSource: [model1,model2,model3], seat: .UpRight) { (indexPatch) in
+        PopView.share.createPopView(target: self, dataSource: [model1,model2,model3]) { (indexPatch) in
             
             print(indexPatch)
             
         }
 
+        
+        CenterPopView.share.createCenterPopView(width: 100, height: 200, color: .red, target: self) { (indexPath) in
+            
+        }
+        
+        
         
     }
     @IBAction func btnClick(_ sender: Any) {
