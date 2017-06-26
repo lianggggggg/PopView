@@ -16,7 +16,8 @@
 		9D8F7D111EFD48D00064ABFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F7D0F1EFD48D00064ABFE /* LaunchScreen.storyboard */; };
 		9D8F7D1C1EFD48D00064ABFE /* PopViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D1B1EFD48D00064ABFE /* PopViewTests.swift */; };
 		9D8F7D271EFD48D00064ABFE /* PopViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D261EFD48D00064ABFE /* PopViewUITests.swift */; };
-		9D8F7D351EFD504F0064ABFE /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D341EFD504F0064ABFE /* PopView.swift */; };
+		9DA516C61F013EB900413FE6 /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA516C51F013EB900413FE6 /* PopView.swift */; };
+		9DA516C81F01444900413FE6 /* PopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA516C71F01444900413FE6 /* PopTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,8 @@
 		9D8F7D221EFD48D00064ABFE /* PopViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8F7D261EFD48D00064ABFE /* PopViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewUITests.swift; sourceTree = "<group>"; };
 		9D8F7D281EFD48D00064ABFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D8F7D341EFD504F0064ABFE /* PopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopView.swift; path = PopView/PopView.swift; sourceTree = SOURCE_ROOT; };
+		9DA516C51F013EB900413FE6 /* PopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopView.swift; sourceTree = "<group>"; };
+		9DA516C71F01444900413FE6 /* PopTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,8 @@
 		9D35509F1EFFE5C000400C16 /* PopView */ = {
 			isa = PBXGroup;
 			children = (
-				9D8F7D341EFD504F0064ABFE /* PopView.swift */,
+				9DA516C51F013EB900413FE6 /* PopView.swift */,
+				9DA516C71F01444900413FE6 /* PopTableView.swift */,
 				9D3550A01EFFE5F300400C16 /* PopViewCell.swift */,
 				9D3550A11EFFE5F300400C16 /* PopViewCell.xib */,
 			);
@@ -278,9 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D8F7D091EFD48D00064ABFE /* ViewController.swift in Sources */,
-				9D8F7D351EFD504F0064ABFE /* PopView.swift in Sources */,
 				9D3550A21EFFE5F300400C16 /* PopViewCell.swift in Sources */,
+				9DA516C61F013EB900413FE6 /* PopView.swift in Sources */,
 				9D8F7D071EFD48D00064ABFE /* AppDelegate.swift in Sources */,
+				9DA516C81F01444900413FE6 /* PopTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
