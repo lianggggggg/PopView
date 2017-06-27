@@ -31,7 +31,7 @@ class PopSourceModel: NSObject {
     var img:String?
 }
 
-enum Seat {
+@objc enum Seat:Int {
     case UpLeft
     case UpCenter
     case UpRight
@@ -190,6 +190,9 @@ class PopView: UIView {
         let backView = UIApplication.shared.keyWindow?.viewWithTag(backView_tag) as! UIView
         popView.tableView.contentOffset = CGPoint.zero
         
+        self.target?.view.bringSubview(toFront: backView)
+        self.target?.view.bringSubview(toFront: popView)
+        
         UIView.animate(withDuration: 0.3) {
             
             if self.isShow {
@@ -323,6 +326,10 @@ class CenterPopView: UIView {
         let centerPopView = UIApplication.shared.keyWindow?.viewWithTag(CenterPopView_tag) as! CenterPopView
         let backView = UIApplication.shared.keyWindow?.viewWithTag(centerBackView_tag) as! UIView
         centerPopView.tableView.contentOffset = CGPoint.zero
+        
+        self.target?.view.bringSubview(toFront: backView)
+        self.target?.view.bringSubview(toFront: centerPopView)
+        
         
         UIView.animate(withDuration: 0.3) {
             
