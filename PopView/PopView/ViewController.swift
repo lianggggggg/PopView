@@ -29,9 +29,19 @@ class ViewController: UIViewController {
             print(indexPatch)
             
         }
-
         
-        CenterPopView.share.createCenterPopView(width: 100, height: 200, color: .red, target: self) { (indexPath) in
+        let sModel1 = centerSourceModel()
+        sModel1.isSelected = true
+        sModel1.title = "1"
+        let sModel2 = centerSourceModel()
+        sModel2.isSelected = false
+        sModel2.title = "2"
+        let sModel3 = centerSourceModel()
+        sModel3.isSelected = false
+        sModel3.title = "3"
+        
+        
+        CenterPopView.share.createCenterPopView(width: 100, height: 140, target: self, dataSource: [sModel1,sModel2,sModel3]) { (indexPath) in
             
         }
         
@@ -39,8 +49,10 @@ class ViewController: UIViewController {
         
     }
     @IBAction func btnClick(_ sender: Any) {
-//        PopView.share.showPopWithAnimation(isShow: true)
         PopView.share.showPopWithAnimation()
+    }
+    @IBAction func buttonClick(_ sender: UIButton) {
+        CenterPopView.share.showPopWithAnimation()
     }
 
     override func didReceiveMemoryWarning() {
