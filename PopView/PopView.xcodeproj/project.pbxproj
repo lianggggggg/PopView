@@ -18,6 +18,8 @@
 		9D8F7D271EFD48D00064ABFE /* PopViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D261EFD48D00064ABFE /* PopViewUITests.swift */; };
 		9DA516C61F013EB900413FE6 /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA516C51F013EB900413FE6 /* PopView.swift */; };
 		9DA516C81F01444900413FE6 /* PopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA516C71F01444900413FE6 /* PopTableView.swift */; };
+		9DF65FEA1F01F2E60095970F /* PopCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF65FE81F01F2E60095970F /* PopCenterCell.swift */; };
+		9DF65FEB1F01F2E60095970F /* PopCenterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DF65FE91F01F2E60095970F /* PopCenterCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		9D8F7D281EFD48D00064ABFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA516C51F013EB900413FE6 /* PopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopView.swift; sourceTree = "<group>"; };
 		9DA516C71F01444900413FE6 /* PopTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTableView.swift; sourceTree = "<group>"; };
+		9DF65FE81F01F2E60095970F /* PopCenterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopCenterCell.swift; sourceTree = "<group>"; };
+		9DF65FE91F01F2E60095970F /* PopCenterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopCenterCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				9DA516C71F01444900413FE6 /* PopTableView.swift */,
 				9D3550A01EFFE5F300400C16 /* PopViewCell.swift */,
 				9D3550A11EFFE5F300400C16 /* PopViewCell.xib */,
+				9DF65FE81F01F2E60095970F /* PopCenterCell.swift */,
+				9DF65FE91F01F2E60095970F /* PopCenterCell.xib */,
 			);
 			path = PopView;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				TargetAttributes = {
 					9D8F7D021EFD48D00064ABFE = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 49QL38VYXX;
 						ProvisioningStyle = Automatic;
 					};
 					9D8F7D161EFD48D00064ABFE = {
@@ -256,6 +263,7 @@
 				9D8F7D0E1EFD48D00064ABFE /* Assets.xcassets in Resources */,
 				9D3550A31EFFE5F300400C16 /* PopViewCell.xib in Resources */,
 				9D8F7D0C1EFD48D00064ABFE /* Main.storyboard in Resources */,
+				9DF65FEB1F01F2E60095970F /* PopCenterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +290,7 @@
 			files = (
 				9D8F7D091EFD48D00064ABFE /* ViewController.swift in Sources */,
 				9D3550A21EFFE5F300400C16 /* PopViewCell.swift in Sources */,
+				9DF65FEA1F01F2E60095970F /* PopCenterCell.swift in Sources */,
 				9DA516C61F013EB900413FE6 /* PopView.swift in Sources */,
 				9D8F7D071EFD48D00064ABFE /* AppDelegate.swift in Sources */,
 				9DA516C81F01444900413FE6 /* PopTableView.swift in Sources */,
@@ -438,7 +447,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 49QL38VYXX;
 				INFOPLIST_FILE = PopView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MrLiang.PopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,7 +461,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 49QL38VYXX;
 				INFOPLIST_FILE = PopView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MrLiang.PopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";

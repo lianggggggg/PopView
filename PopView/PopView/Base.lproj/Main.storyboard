@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,19 +22,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o19-IC-gfi">
-                                <rect key="frame" x="100" y="220" width="175" height="247"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="j7a-JP-Hhv"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yP-Ba-Iqr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODl-7a-oJ6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hVe-5K-gnw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xw1-7d-EDL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="o19-IC-gfi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="8WZ-zX-7uo"/>
-                            <constraint firstAttribute="trailing" secondItem="o19-IC-gfi" secondAttribute="trailing" constant="100" id="SQn-ic-9qT"/>
-                            <constraint firstItem="o19-IC-gfi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="XDh-KV-5pV"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o19-IC-gfi" secondAttribute="bottom" constant="200" id="tHF-0K-ISA"/>
+                            <constraint firstItem="ODl-7a-oJ6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LmJ-0k-hiq"/>
+                            <constraint firstAttribute="trailing" secondItem="o19-IC-gfi" secondAttribute="trailing" id="WY6-7X-8B9"/>
+                            <constraint firstItem="o19-IC-gfi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YEt-aP-d0Y"/>
+                            <constraint firstItem="ODl-7a-oJ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ctm-LO-Mts"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o19-IC-gfi" secondAttribute="bottom" id="o9P-rw-z1h"/>
+                            <constraint firstAttribute="trailing" secondItem="ODl-7a-oJ6" secondAttribute="trailing" id="qTo-6y-mWu"/>
                         </constraints>
                     </view>
                 </viewController>
