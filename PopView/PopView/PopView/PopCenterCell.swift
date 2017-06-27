@@ -1,25 +1,23 @@
 //
-//  PopViewCell.swift
+//  PopCenterCell.swift
 //  PopView
 //
-//  Created by MrLiang on 2017/6/25.
+//  Created by MrLiang on 2017/6/27.
 //  Copyright © 2017年 MrLiang. All rights reserved.
 //
 
 import UIKit
 
-class PopViewCell: UITableViewCell {
+class PopCenterCell: UITableViewCell {
 
-    
-    @IBOutlet weak var lbl2: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+
     
-    open func initCell(model:PopSourceModel){
-        lbl2.text = model.title
+    open func initCell(model:centerSourceModel){
+        
     }
     
     
