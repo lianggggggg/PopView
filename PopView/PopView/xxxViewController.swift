@@ -1,20 +1,21 @@
 //
-//  ViewController.swift
+//  xxxViewController.swift
 //  PopView
 //
-//  Created by MrLiang on 2017/6/23.
+//  Created by MrLiang on 2017/7/3.
 //  Copyright © 2017年 MrLiang. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class xxxViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
         
-        
+        PopView.share.releasePopView()
         
         let model1 = PopSourceModel()
         model1.img = "1"
@@ -32,36 +33,27 @@ class ViewController: UIViewController {
             
         }
         
-        let sModel1 = centerSourceModel()
-        sModel1.isSelected = true
-        sModel1.title = "1"
-        let sModel2 = centerSourceModel()
-        sModel2.isSelected = false
-        sModel2.title = "2"
-        let sModel3 = centerSourceModel()
-        sModel3.isSelected = false
-        sModel3.title = "3"
-        
-        
-        CenterPopView.share.createCenterPopView(width: 100, height: 140, target: self, dataSource: [sModel1,sModel2,sModel3]) { (indexPath) in
-            
-        }
-        
-        
-        
     }
     @IBAction func btnClick(_ sender: Any) {
+        
         PopView.share.showPopWithAnimation()
-    }
-    @IBAction func buttonClick(_ sender: UIButton) {
-        CenterPopView.share.showPopWithAnimation()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
-
