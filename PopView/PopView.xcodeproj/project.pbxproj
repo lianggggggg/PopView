@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D0FC4701F0A1F7100B8217D /* xxxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0FC46F1F0A1F7100B8217D /* xxxViewController.swift */; };
 		9D3550A21EFFE5F300400C16 /* PopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3550A01EFFE5F300400C16 /* PopViewCell.swift */; };
 		9D3550A31EFFE5F300400C16 /* PopViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D3550A11EFFE5F300400C16 /* PopViewCell.xib */; };
 		9D8F7D071EFD48D00064ABFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F7D061EFD48D00064ABFE /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D0FC46F1F0A1F7100B8217D /* xxxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xxxViewController.swift; sourceTree = "<group>"; };
 		9D3550A01EFFE5F300400C16 /* PopViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewCell.swift; sourceTree = "<group>"; };
 		9D3550A11EFFE5F300400C16 /* PopViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopViewCell.xib; sourceTree = "<group>"; };
 		9D8F7D031EFD48D00064ABFE /* PopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 				9D35509F1EFFE5C000400C16 /* PopView */,
 				9D8F7D061EFD48D00064ABFE /* AppDelegate.swift */,
 				9D8F7D081EFD48D00064ABFE /* ViewController.swift */,
+				9D0FC46F1F0A1F7100B8217D /* xxxViewController.swift */,
 				9D8F7D0A1EFD48D00064ABFE /* Main.storyboard */,
 				9D8F7D0D1EFD48D00064ABFE /* Assets.xcassets */,
 				9D8F7D0F1EFD48D00064ABFE /* LaunchScreen.storyboard */,
@@ -290,6 +293,7 @@
 			files = (
 				9D8F7D091EFD48D00064ABFE /* ViewController.swift in Sources */,
 				9D3550A21EFFE5F300400C16 /* PopViewCell.swift in Sources */,
+				9D0FC4701F0A1F7100B8217D /* xxxViewController.swift in Sources */,
 				9DF65FEA1F01F2E60095970F /* PopCenterCell.swift in Sources */,
 				9DA516C61F013EB900413FE6 /* PopView.swift in Sources */,
 				9D8F7D071EFD48D00064ABFE /* AppDelegate.swift in Sources */,

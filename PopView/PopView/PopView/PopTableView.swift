@@ -65,6 +65,11 @@ class PopTableView: UITableView,UITableViewDelegate,UITableViewDataSource {
         self.reloadData()
     }
     
+    open func reloadTableView(dataSource:NSArray){
+        self.source = dataSource
+        self.reloadData()
+    }
+    
     
 //    MARK:UITableViewDelegate/UITableViewDataSource
     
