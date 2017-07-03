@@ -211,11 +211,22 @@ class PopView: UIView {
         
         
     }
-    
 
-    deinit {
-        self.removeFromSuperview()
+    open func releasePopView(){
+        
+        PopView.share.frame = CGRect.zero
+        PopView.share.layer.position = CGPoint.zero
+        PopView.share.dataSource = []
+        PopView.share.imageView = UIImageView()
+        PopView.share.backView = UIView()
+        self.transform = CGAffineTransform.init(scaleX: 1, y: 1) //整个恢复
     }
+    
+    open func reloadPopView(source:[PopSourceModel]){
+        self.tableView.reloadTableView(dataSource: source as NSArray)
+    }
+    
+    
     
 }
 
@@ -349,10 +360,23 @@ class CenterPopView: UIView {
         
     }
     
-    deinit {
-        self.removeFromSuperview()
+    
+    open func releaseCenterPopView(){
+        
+        CenterPopView.share.frame = CGRect.zero
+        CenterPopView.share.layer.position = CGPoint.zero
+        CenterPopView.share.dataSource = []
+        CenterPopView.share.imageView = UIImageView()
+        CenterPopView.share.backView = UIView()
+        self.transform = CGAffineTransform.init(scaleX: 1, y: 1) //整个恢复
     }
     
+    
+    open func reloadCenterView(source:[centerSourceModel]){
+        self.tableView.reloadTableView(dataSource: source as NSArray)
+    }
+    
+
 }
 
 
